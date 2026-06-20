@@ -53,18 +53,20 @@ Exact commands to clone the repo, create venv, install deps, seed demo, and run 
 - Clone the repo:
   - git clone https://github.com/TalentedDc/Smart-Hospital-Appointment-and-Ward-Management-System
   - cd smart-hospital-management-system
-- Create and activate virtual environment:
+
+# Create and activate virtual environment:
   - python3 -m venv venv
   - source venv/bin/activate   # Linux/macOS
   - venv\Scripts\activate      # Windows (PowerShell: .\venv\Scripts\Activate.ps1)
 - Install dependencies:
   - pip install -r requirements.txt
-- Seed demo data and run a CLI demo:
-  - python scripts/seed_demo.py
-  - python main.py --demo
-- Run tests:
+
+# Run the full system demonstration:
+   - python main.py 
+
+# Run tests suite:
   - pytest -q
-- Notes: If using a real DB, configure DATABASE_URL in .env and run migrations (example with Alembic).
+
 
 ## Sample Output
 Paste at least 8 lines of real console output showing the system working (example demo run):
