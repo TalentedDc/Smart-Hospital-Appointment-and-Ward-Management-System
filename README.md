@@ -44,7 +44,7 @@ A table with examples and where they appear in the code. (Ensure each Week 1–5
 | Cohesion & SRP (BillingService computes itemised bills only) | src/services/billing_service.py | Week 5 |
 
 ## System Architecture
-- Embed UML class diagram image: uml/class_diagram.png (also include source at uml/class_diagram.puml).
+[System Architecture](uml/class_diagram.png)
 - High-level description (5–7 sentences):
   - The system follows a layered architecture separating domain models (src/models), business services (src/services), persistence/repositories, scripts for seeding/demo, and tests. Domain objects (Patient, NHISAccount, Staff, Ward, Bed, Prescription, Bill) encapsulate data and related behaviors. Services implement workflows (scheduling, ward allocation, prescriptions, billing) and coordinate model interactions. Composition is used for Ward→Bed (Ward "owns" Bed objects). Aggregation is used where Patient references but does not own external resources (e.g., historical records stored externally). The persistence layer is abstracted so the project can use SQLite for demo and PostgreSQL for production. Design choices favor high cohesion and single responsibility per class.
 
@@ -53,22 +53,21 @@ Exact commands to clone the repo, create venv, install deps, seed demo, and run 
 - Clone the repo:
   - git clone https://github.com/TalentedDc/Smart-Hospital-Appointment-and-Ward-Management-System
   - cd smart-hospital-management-system
-- Create and activate virtual environment:
+
+# Create and activate virtual environment:
   - python3 -m venv venv
   - source venv/bin/activate   # Linux/macOS
   - venv\Scripts\activate      # Windows (PowerShell: .\venv\Scripts\Activate.ps1)
 - Install dependencies:
   - pip install -r requirements.txt
-- Seed demo data and run a CLI demo:
-  - python scripts/seed_demo.py
-  - python main.py --demo
-- Run tests:
+
+# Run the full system demonstration:
+   - python main.py 
+
+# Run tests suite:
   - pytest -q
-- Notes: If using a real DB, configure DATABASE_URL in .env and run migrations (example with Alembic).
 
 ## Sample Output
-Paste at least 8 lines of real console output showing the system working (example demo run):
-
 ```
 [INFO] 2026-06-19 10:00:00 - Creating demo NHIS account for patient NG-000123
 [INFO] 2026-06-19 10:00:01 - Registered Patient: John Doe (NHIS: NG-000123) — PatientID: P0001
@@ -94,7 +93,7 @@ Paste at least 8 lines of real console output showing the system working (exampl
 - pytest documentation — https://docs.pytest.org/
 - PlantUML — https://plantuml.com/
 - National Health Insurance Scheme (NHIS) — https://www.nhis.gov.ng/ (for NHIS policy and contact)
-- General OOP & Design Patterns references used during design (Gang of Four, SOLID principles)
+- Cpe 310 Capstone project brief - Group 8,Federal University of Oye Ekiti
 
 
 
