@@ -1,4 +1,4 @@
-CPE310 - Object-Oriented Programming with Python | Capstone Project
+CPE310 - Object-Oriented Programming with Python | Capstone Project Group 8
 Computer Engineering, Federal University Oye-Ekiti | 2025/2026 Session
 
 ## Project Tiltle and Overview:  Smart Hospital Appointment and Ward Management System
